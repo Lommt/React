@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+
 import './App.css';
 
 function App() {
+
+  const userName = 'Юрий';
+  const userAge = 23;
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Myheader name={userName} age={userAge} />
     </div>
+
   );
 }
 
 export default App;
+
+
+const Myheader = (props) => {
+  return (
+    <div className="myHeader-block">
+      <h1>Привет! Меня зовут {props.name} и мне {props.age} года </h1>
+    </div>
+  )
+}
