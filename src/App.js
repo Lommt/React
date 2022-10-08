@@ -3,12 +3,12 @@ import './App.css';
 
 function App() {
 
-  const userName = 'Юрий';
-  const userAge = 23;
+  const text = 'Меня зовут Юрий, и я опоздал со сдачей задания, в связи с тем что заканчивал работу над магазином курса JS-2. Прошу прощение за задержку)';
+
 
   return (
     <div className="App">
-      <Myheader name={userName} age={userAge} />
+      <Message text={text} />
     </div>
 
   );
@@ -17,10 +17,10 @@ function App() {
 export default App;
 
 
-const Myheader = (props) => {
+const Message = ({ text }) => {
   return (
-    <div className="myHeader-block">
-      <h1>Привет! Меня зовут {props.name} и мне {props.age} года </h1>
+    <div className="Message">
+      <h1>{text}</h1>
     </div>
   )
 }
