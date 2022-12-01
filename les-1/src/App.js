@@ -1,5 +1,6 @@
 
 import './App.css';
+import Message from './Message.jsx';
 
 function App() {
 
@@ -17,10 +18,3 @@ function App() {
 export default App;
 
 
-const Message = ({ text }) => {
-  return (
-    <div className="Message">
-      <h1>{text}</h1>
-    </div>
-  )
-} 
